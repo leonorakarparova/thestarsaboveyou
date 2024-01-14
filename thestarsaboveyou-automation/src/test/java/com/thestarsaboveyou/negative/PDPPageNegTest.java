@@ -25,4 +25,20 @@ public class PDPPageNegTest extends BaseTest {
         PDPPage.clickAddToBasketButton();
         BasketPage.verifyEmptyLocationErrorMessage();
     }
+
+    @Test
+    public void testAddToBasketWithoutSelectedType(){
+        HomePage.open();
+        HomePage.clickToOrderButton();
+        PDPPage.verifyProductTitle();
+        PDPPage.enterDate("12.03.2019");
+        PDPPage.enterTime("18:10");
+        PDPPage.enterLocation(" ");
+        PDPPage.enterText("Life is journey");
+        PDPPage.selectDesign(1);
+        PDPPage.selectFont(1);
+        Cookies.acceptCookies();
+        PDPPage.clickAddToBasketButton();
+        PDPPage.verifyAlertBox();
+    }
 }

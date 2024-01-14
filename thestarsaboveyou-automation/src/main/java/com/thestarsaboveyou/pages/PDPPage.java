@@ -1,12 +1,15 @@
 package com.thestarsaboveyou.pages;
 
 import com.thestarsaboveyou.core.Base;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import java.util.List;
+
+import static com.thestarsaboveyou.utils.Browser.driver;
 
 public class PDPPage extends Base {
 
@@ -95,5 +98,11 @@ public class PDPPage extends Base {
      */
     public static void clickAddToBasketButton(){
         click(ADD_TO_BASKET_BUTTON);
+    }
+
+    public static void verifyAlertBox(){
+        Alert alert = driver.switchTo().alert();
+        String alertText = alert.getText();
+        Assert.assertEquals(alertText, "Първо изберете опции на продукта преди да го добавите в количката.", "Expected alert message didn't appear.");
     }
 }
