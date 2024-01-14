@@ -1,6 +1,6 @@
-package com.thestarsaboveyou.core;
+package com.thestarsaboveyou.testng.core;
 
-import com.thestarsaboveyou.utils.Browser;
+import com.thestarsaboveyou.testng.utils.Browser;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 

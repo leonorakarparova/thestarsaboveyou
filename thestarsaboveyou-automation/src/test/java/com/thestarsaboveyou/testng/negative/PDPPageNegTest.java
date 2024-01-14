@@ -1,10 +1,10 @@
-package com.thestarsaboveyou.negative;
+package com.thestarsaboveyou.testng.negative;
 
-import com.thestarsaboveyou.core.BaseTest;
-import com.thestarsaboveyou.pages.BasketPage;
-import com.thestarsaboveyou.pages.Cookies;
-import com.thestarsaboveyou.pages.HomePage;
-import com.thestarsaboveyou.pages.PDPPage;
+import com.thestarsaboveyou.testng.core.BaseTest;
+import com.thestarsaboveyou.testng.pages.BasketPage;
+import com.thestarsaboveyou.testng.pages.Cookies;
+import com.thestarsaboveyou.testng.pages.HomePage;
+import com.thestarsaboveyou.testng.pages.PDPPage;
 import org.testng.annotations.Test;
 
 public class PDPPageNegTest extends BaseTest {

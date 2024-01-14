@@ -1,4 +1,4 @@
-package com.thestarsaboveyou.utils;
+package com.thestarsaboveyou.testng.utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

@@ -1,6 +1,6 @@
-package com.thestarsaboveyou.pages;
+package com.thestarsaboveyou.testng.pages;
 
-import com.thestarsaboveyou.core.Base;
+import com.thestarsaboveyou.testng.core.Base;
 import org.openqa.selenium.By;
 
 public class HeaderArea extends Base {

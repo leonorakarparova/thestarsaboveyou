@@ -1,6 +1,7 @@
-package com.thestarsaboveyou.pages;
+package com.thestarsaboveyou.testng.pages;
 
-import com.thestarsaboveyou.core.Base;
+import com.thestarsaboveyou.testng.core.Base;
+import com.thestarsaboveyou.testng.utils.Browser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +10,6 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import java.time.Duration;
-import static com.thestarsaboveyou.utils.Browser.driver;
 
 public class OrderPage extends Base {
 
@@ -100,7 +100,7 @@ public class OrderPage extends Base {
      * Accepts the therms and conditions
      */
     public static void acceptTerms(){
-        Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        Wait<WebDriver> wait = new WebDriverWait(Browser.driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.stalenessOf(getWebelement(TERMS)));
         WebElement terms = getWebelement(TERMS);
         if(!terms.isSelected()){
@@ -113,7 +113,7 @@ public class OrderPage extends Base {
      * Clicks the order button to finish the order
      */
     public static void clickPlaceOrderButtonWithWait(){
-        Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        Wait<WebDriver> wait = new WebDriverWait(Browser.driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.stalenessOf(getWebelement(PLACE_ORDER_BUTTON)));
         WebElement placeOrderButton = getWebelement(PLACE_ORDER_BUTTON);
         placeOrderButton.click();

@@ -1,7 +1,7 @@
-package com.thestarsaboveyou.negative;
+package com.thestarsaboveyou.testng.negative;
 
-import com.thestarsaboveyou.core.BaseTest;
-import com.thestarsaboveyou.pages.*;
+import com.thestarsaboveyou.testng.core.BaseTest;
+import com.thestarsaboveyou.testng.pages.*;
 import org.testng.annotations.Test;
 
 public class OrderPageNegTest extends BaseTest {

@@ -1,7 +1,8 @@
-package com.thestarsaboveyou.positive;
+package com.thestarsaboveyou.testng.positive;
 
-import com.thestarsaboveyou.core.BaseTest;
-import com.thestarsaboveyou.pages.*;
+import com.thestarsaboveyou.testng.core.BaseTest;
+import com.thestarsaboveyou.testng.pages.*;
+import com.thestarsaboveyou.testng.pages.*;
 import org.testng.annotations.Test;
 
 public class FooterTest extends BaseTest {

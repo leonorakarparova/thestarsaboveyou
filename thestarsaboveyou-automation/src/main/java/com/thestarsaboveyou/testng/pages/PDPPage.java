@@ -1,15 +1,11 @@
-package com.thestarsaboveyou.pages;
+package com.thestarsaboveyou.testng.pages;
 
-import com.thestarsaboveyou.core.Base;
+import com.thestarsaboveyou.testng.core.Base;
+import com.thestarsaboveyou.testng.utils.Browser;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-
-import java.util.List;
-
-import static com.thestarsaboveyou.utils.Browser.driver;
 
 public class PDPPage extends Base {
 
@@ -100,8 +96,11 @@ public class PDPPage extends Base {
         click(ADD_TO_BASKET_BUTTON);
     }
 
+    /**
+     * Verifies that the alert box is present
+     */
     public static void verifyAlertBox(){
-        Alert alert = driver.switchTo().alert();
+        Alert alert = Browser.driver.switchTo().alert();
         String alertText = alert.getText();
         Assert.assertEquals(alertText, "Първо изберете опции на продукта преди да го добавите в количката.", "Expected alert message didn't appear.");
     }

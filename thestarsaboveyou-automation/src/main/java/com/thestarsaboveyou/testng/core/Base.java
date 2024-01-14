@@ -1,6 +1,6 @@
-package com.thestarsaboveyou.core;
+package com.thestarsaboveyou.testng.core;
 
-import com.thestarsaboveyou.utils.Browser;
+import com.thestarsaboveyou.testng.utils.Browser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 

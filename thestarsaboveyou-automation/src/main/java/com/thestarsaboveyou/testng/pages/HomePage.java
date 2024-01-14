@@ -1,9 +1,8 @@
-package com.thestarsaboveyou.pages;
+package com.thestarsaboveyou.testng.pages;
 
-import com.thestarsaboveyou.core.Base;
-import com.thestarsaboveyou.utils.Browser;
+import com.thestarsaboveyou.testng.core.Base;
+import com.thestarsaboveyou.testng.utils.Browser;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 public class HomePage extends Base {

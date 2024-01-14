@@ -1,9 +1,8 @@
-package com.thestarsaboveyou.positive;
+package com.thestarsaboveyou.testng.positive;
 
-import com.thestarsaboveyou.core.Base;
-import com.thestarsaboveyou.core.BaseTest;
-import com.thestarsaboveyou.pages.HomePage;
-import com.thestarsaboveyou.pages.PDPPage;
+import com.thestarsaboveyou.testng.core.BaseTest;
+import com.thestarsaboveyou.testng.pages.HomePage;
+import com.thestarsaboveyou.testng.pages.PDPPage;
 import org.testng.annotations.Test;
 
 public class HomePageTest extends BaseTest {
