@@ -33,7 +33,7 @@ public class PDPPageNegTest extends BaseTest {
         PDPPage.verifyProductTitle();
         PDPPage.enterDate("12.03.2019");
         PDPPage.enterTime("18:10");
-        PDPPage.enterLocation(" ");
+        PDPPage.enterLocation("Sofia");
         PDPPage.enterText("Life is journey");
         PDPPage.selectDesign(1);
         PDPPage.selectFont(1);

@@ -100,8 +100,11 @@ public class OrderPage extends Base {
      * Accepts the therms and conditions
      */
     public static void acceptTerms(){
-        Wait<WebDriver> wait = new WebDriverWait(Browser.driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.stalenessOf(getWebelement(TERMS)));
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         WebElement terms = getWebelement(TERMS);
         if(!terms.isSelected()){
             terms.click();
@@ -110,7 +113,7 @@ public class OrderPage extends Base {
     }
 
     /**
-     * Clicks the order button to finish the order
+     * Clicks the order button to finish the order with explicit wait
      */
     public static void clickPlaceOrderButtonWithWait(){
         Wait<WebDriver> wait = new WebDriverWait(Browser.driver, Duration.ofSeconds(5));
@@ -119,19 +122,32 @@ public class OrderPage extends Base {
         placeOrderButton.click();
     }
 
+    /**
+     * Clicks the order button to finish the order without wait
+     */
     public static void clickPlaceOrderButtonWithoutWait(){
         click(PLACE_ORDER_BUTTON);
     }
 
+    /**
+     * Verifies that the accepting terms error message is present
+     */
     public static void verifyTermsErrorMessage() {
         String actualTermsErrorMessage = getText(TERMS_ERROR_MESSAGE);
         Assert.assertEquals(actualTermsErrorMessage, "Прочетете и приемете общите условия, за да продължите с поръчката.", "Expected error message didn't appear.");
     }
+
+    /**
+     * Verifies that the invalid email error message is present
+     */
     public static void verifyInvalidEmailErrorMessage(){
         String actualInvalidEmailErrorMessage = getText(INVALID_EMAIL_ERROR_MESSAGE);
         Assert.assertEquals(actualInvalidEmailErrorMessage,"Невалиден имейл адрес за таксуване", "Expected error message didn't appear.");
     }
 
+    /**
+     * Verifies that the invalid phone number error message is present
+     */
     public static void verifyInvalidPhoneNumberErrorMessage(){
         String actualInvalidPhoneNumberErrorMessage = getText(INVALID_PHONE_NUMBER_MESSAGE);
         Assert.assertEquals(actualInvalidPhoneNumberErrorMessage, "Phone за фактуриране не е валиден телефонен номер.", "Expected error message didn't appear.");
