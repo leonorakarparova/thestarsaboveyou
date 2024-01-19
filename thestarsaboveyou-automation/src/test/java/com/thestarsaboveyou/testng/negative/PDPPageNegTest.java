@@ -21,7 +21,7 @@ public class PDPPageNegTest extends BaseTest {
         PDPPage.enterText("Life is journey");
         PDPPage.selectDesign(1);
         PDPPage.selectFont(1);
-        Cookies.acceptCookies();
+        Cookies.acceptCookiesIfPresent();
         PDPPage.clickAddToBasketButton();
         BasketPage.verifyEmptyLocationErrorMessage();
     }
@@ -37,7 +37,7 @@ public class PDPPageNegTest extends BaseTest {
         PDPPage.enterText("Life is journey");
         PDPPage.selectDesign(1);
         PDPPage.selectFont(1);
-        Cookies.acceptCookies();
+        Cookies.acceptCookiesIfPresent();
         PDPPage.clickAddToBasketButton();
         PDPPage.verifyAlertBox();
     }

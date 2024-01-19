@@ -9,7 +9,7 @@ public class FooterTest extends BaseTest {
     @Test
     public void testClickContactsButton(){
         HomePage.open();
-        Cookies.acceptCookies();
+        Cookies.acceptCookiesIfPresent();
         Footer.clickContacts();
         ContactsPage.verifyContactsArticleArea();
     }
@@ -17,7 +17,7 @@ public class FooterTest extends BaseTest {
     @Test
     public void testClickDeliveryButton(){
         HomePage.open();
-        Cookies.acceptCookies();
+        Cookies.acceptCookiesIfPresent();
         Footer.clickDelivery();
         DeliveryPage.verifyDeliveryArticleArea();
     }
@@ -25,7 +25,7 @@ public class FooterTest extends BaseTest {
     @Test
     public void testClickGeneralTermsButton(){
         HomePage.open();
-        Cookies.acceptCookies();
+        Cookies.acceptCookiesIfPresent();
         Footer.clickGeneralTerms();
         GeneralTerms.verifyGeneralTermsArticleArea();
     }

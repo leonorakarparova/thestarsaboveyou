@@ -18,7 +18,7 @@ public class OrderPageNegTest extends BaseTest {
         PDPPage.enterText("The stars above us");
         PDPPage.selectDesign(0);
         PDPPage.selectFont(1);
-        Cookies.acceptCookies();
+        Cookies.acceptCookiesIfPresent();
         PDPPage.clickAddToBasketButton();
         BasketPage.verifyAddedToBasketMessage();
         BasketPage.clickOrderCompletionButton();
@@ -46,7 +46,7 @@ public class OrderPageNegTest extends BaseTest {
         PDPPage.enterText("Night sky");
         PDPPage.selectDesign(0);
         PDPPage.selectFont(0);
-        Cookies.acceptCookies();
+        Cookies.acceptCookiesIfPresent();
         PDPPage.clickAddToBasketButton();
         BasketPage.verifyAddedToBasketMessage();
         BasketPage.clickOrderCompletionButton();
@@ -75,7 +75,7 @@ public class OrderPageNegTest extends BaseTest {
         PDPPage.enterText("Sky");
         PDPPage.selectDesign(1);
         PDPPage.selectFont(1);
-        Cookies.acceptCookies();
+        Cookies.acceptCookiesIfPresent();
         PDPPage.clickAddToBasketButton();
         BasketPage.verifyAddedToBasketMessage();
         BasketPage.clickOrderCompletionButton();

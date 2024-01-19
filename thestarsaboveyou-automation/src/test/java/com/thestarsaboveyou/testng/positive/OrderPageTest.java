@@ -18,7 +18,7 @@ public class OrderPageTest extends BaseTest {
         PDPPage.enterText("Stars");
         PDPPage.selectDesign(0);
         PDPPage.selectFont(1);
-        Cookies.acceptCookies();
+        Cookies.acceptCookiesIfPresent();
         PDPPage.clickAddToBasketButton();
         BasketPage.verifyAddedToBasketMessage();
         BasketPage.clickOrderCompletionButton();

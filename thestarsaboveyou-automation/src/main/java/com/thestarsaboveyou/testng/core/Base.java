@@ -4,6 +4,8 @@ import com.thestarsaboveyou.testng.utils.Browser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 public class Base {
 
     /**
@@ -13,6 +15,15 @@ public class Base {
      */
     protected static WebElement getWebelement(By locator){
         return Browser.driver.findElement(locator);
+    }
+
+    /**
+     * Gets web elements based on provided locator
+     * @param locator the locator to the elements
+     * @return the web elements
+     */
+    protected static List<WebElement> getWebelements(By locator){
+        return Browser.driver.findElements(locator);
     }
 
     /**

@@ -32,7 +32,7 @@ public class PDPPageTest extends BaseTest {
         PDPPage.enterText(text);
         PDPPage.selectDesign(indexDesign);
         PDPPage.selectFont(indexFont);
-        Cookies.acceptCookies();
+        Cookies.acceptCookiesIfPresent();
         PDPPage.clickAddToBasketButton();
         BasketPage.verifyAddedToBasketMessage();
         BasketPage.clickOrderCompletionButton();
