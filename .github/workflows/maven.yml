@@ -34,6 +34,11 @@ jobs:
         ls -l
         cd thestarsaboveyou-automation
         mvn -B test
+    
+    - uses: actions/upload-artifact@v4
+      with:
+        name: Cucumber HTML Report
+        path: thestarsaboveyou-automation/target/cucumber.html
 
   Release:
     runs-on: ubuntu-latest
