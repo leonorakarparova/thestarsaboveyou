@@ -36,6 +36,7 @@ jobs:
         mvn -B test
     
     - uses: actions/upload-artifact@v4
+      if: always()
       with:
         name: Cucumber HTML Report
         path: thestarsaboveyou-automation/target/cucumber.html
