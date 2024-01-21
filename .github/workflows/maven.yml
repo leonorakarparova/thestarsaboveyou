@@ -17,7 +17,7 @@ on:
 
 jobs:
   Test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - name: Checkout current repository
@@ -53,7 +53,7 @@ jobs:
       uses: scacap/action-surefire-report@v1
 
   Release:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: Test
     steps:
     - name: Release it
