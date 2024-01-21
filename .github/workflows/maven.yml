@@ -32,7 +32,6 @@ jobs:
     
     - name: Test with Maven
       run: | 
-        ls -l
         cd thestarsaboveyou-automation
         mvn -B test
     
