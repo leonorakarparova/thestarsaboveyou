@@ -16,7 +16,6 @@ public class Browser {
      */
     public static void open(){
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
