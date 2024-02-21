@@ -48,10 +48,6 @@ jobs:
         name: TestNG Reports
         path: thestarsaboveyou-automation/target/surefire-reports
     
-    - name: Publish TestNG Report
-      if: always()
-      uses: scacap/action-surefire-report@v1
-
   Release:
     runs-on: self-hosted
     needs: Test
