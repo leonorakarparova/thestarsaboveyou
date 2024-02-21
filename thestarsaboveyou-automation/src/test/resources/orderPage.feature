@@ -56,7 +56,7 @@
       And enters the Phone number
       And enters the Email
       And clicks on Delivery payment
-      And clicks on Place order button with explicit wait
+      And clicks on Place order button
       Then he verifies that the Complete order message is present
 
     @negative @order @invalidEmail
@@ -88,7 +88,7 @@
       Then he verifies that the Complete order message is present
 
       @negative @order @invalidPhoneNumber
-      Scenario:
+      Scenario: Make an order with invalid phone number
         Given the user is on Home page
         When he clicks on Order button
         And he verifies that the Product title is present

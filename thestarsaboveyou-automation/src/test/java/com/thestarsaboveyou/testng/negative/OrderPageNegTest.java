@@ -30,7 +30,7 @@ public class OrderPageNegTest extends BaseTest {
         OrderPage.enterPhoneNumber("987456321");
         OrderPage.enterEmail("stoyan456@gmail.com");
         OrderPage.clickDeliveryPayment();
-        OrderPage.clickPlaceOrderButtonWithWait();
+        OrderPage.clickPlaceOrderButtonWithoutWait();
         OrderPage.verifyTermsErrorMessage();
     }
 
